@@ -86,7 +86,7 @@ function Navbar({ topics }) {
           <div className="flex items-center justify-between">
             <div className="flex">
               <Link href="/">
-                <a className="flex items-center hover:text-indigo-600 text-gray-800 dark:text-gray-50">
+                <a className="flex items-center hover:text-indigo-600 text-red-800 dark:text-gray-50">
                   <span className="text-xl font-semibold">
                     <BiTerminal className="text-xl" />
                   </span>
@@ -97,7 +97,7 @@ function Navbar({ topics }) {
               </Link>
 
               <div className="dropdown inline-block relative mx-2">
-                <a className="flex items-center hover:text-indigo-600 text-gray-800 dark:text-gray-50 mx-6 cursor-pointer">
+                <a className="flex items-center hover:text-indigo-600 text-red-800 dark:text-gray-50 mx-6 cursor-pointer">
                   <span className="text-xl font-semibold">
                     <SiCodefactor className="text-sm" />
                   </span>
@@ -125,7 +125,7 @@ function Navbar({ topics }) {
 
             <div className="flex items-center -mx-3">
               <button
-                className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50"
+                className="flex items-center mx-2 lg:mx-4 text-base text-red-800 hover:text-indigo-600 dark:text-gray-50"
                 onClick={toggleTheme}
               >
                 <span className="text-lg">
@@ -138,14 +138,14 @@ function Navbar({ topics }) {
               </button>
 
               <Link href="/about">
-                <a className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
+                <a className="flex items-center mx-2 lg:mx-4 text-base text-red-800 hover:text-indigo-600 dark:text-gray-50">
                   <span className="text-xl">
                     <CgUserlane className="text-xl" />
                   </span>
                 </a>
               </Link>
 
-              <button className="flex items-center mx-2 lg:mx-4 text-base text-gray-800 hover:text-indigo-600 dark:text-gray-50">
+              <button className="flex items-center mx-2 lg:mx-4 text-base text-red-800 hover:text-indigo-600 dark:text-gray-50">
                 {isLogin ? (
                   <span
                     className="md:flex items-center"

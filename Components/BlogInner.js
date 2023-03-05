@@ -24,7 +24,7 @@ function BlogInner({ data, content, headings }) {
                 </p>
               ))}
             </div>
-            <a className="block mt-2 text-2xl sm:text-4xl font-semibold text-gray-800 dark:text-gray-100">
+            <a className="block mt-2 text-2xl sm:text-4xl font-semibold text-green-800 dark:text-gray-100">
               {data.Title}
             </a>
 
@@ -42,10 +42,10 @@ function BlogInner({ data, content, headings }) {
                   <BsThreeDots />
                 </p>
                 <p className="text-2xl pb-2">Thanks for reading!!!</p>
-                <p className="mx-2 font-semibold text-gray-700 dark:text-gray-100">
+                <p className="mx-2 font-semibold text-purple-700 dark:text-gray-100">
                   {data.Author}
                 </p>
-                <p className="text-sm font-medium leading-4 text-gray-600 dark:text-gray-200">
+                <p className="text-sm font-medium leading-4 text-green-600 dark:text-gray-200">
                   Author
                 </p>
               </div>

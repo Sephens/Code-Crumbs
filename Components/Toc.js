@@ -10,7 +10,7 @@ function Toc({ headings }) {
         {headings.map((heading, index) => (
           <li
             key={heading.uid}
-            className="mt-4 text-lg text-gray-700 dark:text-gray-400"
+            className="mt-4 text-lg text-green-700 dark:text-gray-400"
             style={{
               paddingLeft: heading.level === 3 ? "1rem" : "",
               color: heading.id === active ? "#6366f1" : "",
