@@ -1,9 +1,9 @@
-## Bits-0f-C0de
+## Code-Crumbs
 
 ## Writing own blogs made easier for everyone!
 
 <h2 align="center">
-  <a href="https://soumyajitblogs.vercel" target="_blank">sephenscode_crumbs.tech</a>
+  <a href="https://sephens.vercel" target="_blank">sephenscode_crumbs.tech</a>
 </h2>
 
 <div align="center">
