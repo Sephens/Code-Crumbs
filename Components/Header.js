@@ -14,7 +14,7 @@ function Header({ topic, topicName, topicCount }) {
       {!topic && (
         <div className="pt-24 px-12 mx-auto max-w-7xl">
           <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-            <p className="px-0 mb-2 text-lg font-bold text-gray-800 md:text-xl lg:px-24 dark:text-gray-300">
+            <p className="px-0 mb-2 text-lg font-bold text-green-800 md:text-xl lg:px-24 dark:text-gray-300">
               Code-Crumbs
             </p>
 

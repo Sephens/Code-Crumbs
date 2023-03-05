@@ -22,7 +22,7 @@ function about({ topics }) {
         </div>
         <h2 className="text-3xl font-semibold text-gray-700 py-4 dark:text-gray-200">
           Hi,{" "}
-          <span className="bg-indigo-400 text-white rounded px-1 dark:bg-indigo-500">
+          <span className="bg-purple-400 text-white rounded px-1 dark:bg-indigo-500">
             I’m Steven
           </span>{" "}
           . Nice to meet you.
@@ -34,7 +34,7 @@ function about({ topics }) {
         </p>
 
         <div className="text-center pt-8">
-          <button className="bg-indigo-500 px-3 py-1 font-semibold text-white inline-flex items-center space-x-2 rounded dark:bg-indigo-600">
+          <button className="bg-green-500 px-3 py-1 font-semibold text-white inline-flex items-center space-x-2 rounded dark:bg-green-600">
             <FaLaptop />
             <a
               rel="noopener noreferrer"
@@ -45,7 +45,7 @@ function about({ topics }) {
             </a>
           </button>
 
-          <button className="bg-indigo-500 px-3 py-1 font-semibold text-white inline-flex items-center space-x-2 rounded ml-3 dark:bg-indigo-600">
+          <button className="bg-green-500 px-3 py-1 font-semibold text-white inline-flex items-center space-x-2 rounded ml-3 dark:bg-indigo-600">
             <FaTwitter />
             <a
               className="twitter-follow-button"
