@@ -123,7 +123,7 @@ function Comments({ id }) {
             />
             <div className="text-right">
               <button
-                className="bg-indigo-500 dark:bg-indigo-600 text-white px-3 py-1.5 rounded text-sm font-semibold mr-5"
+                className="bg-purple-600 dark:bg-indigo-600 text-white px-3 py-1.5 rounded text-sm font-semibold mr-5"
                 onClick={(e) => {
                   e.preventDefault();
                   setComment("");
@@ -132,7 +132,7 @@ function Comments({ id }) {
                 Reset
               </button>
               <button
-                className="bg-indigo-500 dark:bg-indigo-600 text-white px-3 py-1.5 rounded text-sm font-semibold"
+                className="bg-purple-600 dark:bg-indigo-600 text-white px-3 py-1.5 rounded text-sm font-semibold"
                 onClick={handelPost}
               >
                 Post

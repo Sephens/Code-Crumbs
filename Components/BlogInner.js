@@ -18,30 +18,30 @@ function BlogInner({ data, content, headings }) {
               {data.Tags.split(" ").map((tag) => (
                 <p
                   key={tag}
-                  className="inline-block px-3 ml-3 py-1 mb-4 text-xs font-semibold tracking-wider text-gray-50 uppercase rounded-full bg-indigo-500 dark:bg-indigo-600"
+                  className="inline-block px-3 ml-3 py-1 mb-4 text-xs font-semibold tracking-wider text-gray-50 uppercase rounded-full bg-purple-500 dark:bg-purple-600"
                 >
                   {tag}
                 </p>
               ))}
             </div>
-            <a className="block mt-2 text-2xl sm:text-4xl font-semibold text-green-800 dark:text-gray-100">
+            <a className="block mt-2 text-2xl sm:text-4xl font-semibold text-red-800 dark:text-gray-100">
               {data.Title}
             </a>
 
-            <p className="text-5xl pt-2">
+            <p className="text-7xl pt-2  text-green-800">
               <BsThreeDots />
             </p>
 
-            <article className="prose max-w-xs sm:max-w-sm md:max-w-prose lg:prose-lg py-7 dark:prose-dark ">
+            <article className="prose max-w-xs sm:max-w-sm md:max-w-prose lg:prose-lg py-7 dark:prose-dark  text-gray-600 ">
               <MDXRemote {...content} />
             </article>
 
             <div className="mt-3">
               <div className="flex items-center flex-col">
-                <p className="text-5xl pb-2">
+                <p className="text-5xl pb-2  text-green-800">
                   <BsThreeDots />
                 </p>
-                <p className="text-2xl pb-2">Thanks for reading!!!</p>
+                <p className="text-2xl pb-2">Happy Coding!</p>
                 <p className="mx-2 font-semibold text-purple-700 dark:text-gray-100">
                   {data.Author}
                 </p>

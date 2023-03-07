@@ -7,7 +7,7 @@ function Alert({ show, type, message }) {
       className={
         type === "success"
           ? "fixed bottom-10 z-50 rounded-lg max-w-sm text-white bg-purple-500 dark:bg-purple-600 font-medium inset-x-0 mx-auto"
-          : "fixed bottom-10 z-50 rounded-lg max-w-sm text-white bg-blue-500 font-medium inset-x-0 mx-auto"
+          : "fixed bottom-10 z-50 rounded-lg max-w-sm text-white bg-red-600 font-medium inset-x-0 mx-auto"
       }
     >
       <div className="px-4 py-3 leading-normal flex items-center justify-center">
