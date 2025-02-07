@@ -29,7 +29,7 @@
 
 ## Built With
 
-My personal blogpage <a href="http://blogs.soumya-jit.tech/" target="_blank">blogs.sephens.tech</a> which features some of my developer blog posts and experiences.<br/>
+My personal blogpage <a href="https://code-crumbs.vercel.app/" target="_blank">blogs.sephens.tech</a> which features some of my developer blog posts and experiences.<br/>
 
 This project was built using these technologies.
 
