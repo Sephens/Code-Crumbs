@@ -16,6 +16,7 @@ export const getStaticProps = () => {
   };
 };
 
+
 export default function Home({ blogs, topics }) {
   return (
     <>
