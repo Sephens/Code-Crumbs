@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @variants dark {
+/* @layer utilities {
+  .dark {
     .bg-dark {
       background: #070c17db;
       backdrop-filter: blur(3px);
     }
   }
-}
+} */
 
 html {
   scroll-behavior: smooth;
