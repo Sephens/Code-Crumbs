@@ -12,47 +12,81 @@ import { getHeadings } from "../../Lib/GetHeadings";
 import LikeBtn from "../../Components/LikeBtn";
 
 export const getStaticPaths = () => {
-  const allBlogs = getAllBlogPosts();
-  return {
-    paths: allBlogs.map((blog) => ({
-      params: {
-        id: String(blog.data.Title.split(" ").join("-").toLowerCase()),
-      },
-    })),
-    fallback: false,
-  };
+  try {
+    const allBlogs = getAllBlogPosts();
+    return {
+      paths: allBlogs.map((blog) => ({
+        params: {
+          id: String(blog.data.Title.split(" ").join("-").toLowerCase()),
+        },
+      })),
+      fallback: 'blocking',
+    };
+  } catch (error) {
+    console.error("Error in getStaticPaths:", error);
+    return {
+      paths: [],
+      fallback: 'blocking',
+    };
+  }
 };
 
 export const getStaticProps = async (context) => {
-  const params = context.params;
-  const allBlogs = getAllBlogPosts();
-  const allTopics = getAllTopics();
+  try {
+    const params = context.params;
+    const allBlogs = getAllBlogPosts();
+    const allTopics = getAllTopics();
 
-  const page = allBlogs.find(
-    (blog) =>
-      String(blog.data.Title.split(" ").join("-").toLowerCase()) === params.id
-  );
+    const page = allBlogs.find(
+      (blog) =>
+        String(blog.data.Title.split(" ").join("-").toLowerCase()) === params.id
+    );
 
-  const { data, content } = page;
-  const mdxSource = await serialize(content, {
-    scope: data,
-    mdxOptions: { remarkPlugins: [remarkHeadingId] },
-  });
+    if (!page) {
+      return {
+        notFound: true,
+      };
+    }
 
-  const headings = await getHeadings(content);
+    const { data, content } = page;
 
-  return {
-    props: {
-      data: data,
-      content: mdxSource,
-      id: params.id,
-      headings: headings,
-      topics: allTopics,
-    },
-  };
+    if (!content || typeof content !== "string") {
+      console.error("Invalid MDX content for blog:", params.id);
+      return {
+        notFound: true,
+      };
+    }
+
+    const mdxSource = await serialize(content, {
+      scope: data,
+      mdxOptions: { remarkPlugins: [remarkHeadingId] },
+    });
+
+    const headings = await getHeadings(content);
+
+    const headerImage = data.HeaderImage
+      ? `https://raw.githubusercontent.com/Sephens/Code-Crumbs/main/public${data.HeaderImage}`
+      : "https://example.com/default-image.jpg";
+
+    return {
+      props: {
+        data: data,
+        content: mdxSource,
+        id: params.id,
+        headings: headings,
+        topics: allTopics,
+        headerImage: headerImage,
+      },
+    };
+  } catch (error) {
+    console.error("Error in getStaticProps:", error);
+    return {
+      notFound: true,
+    };
+  }
 };
 
-function id({ data, content, id, headings, topics }) {
+function id({ data, content, id, headings, topics, headerImage }) {
   return (
     <>
       <Head>
@@ -64,19 +98,13 @@ function id({ data, content, id, headings, topics }) {
         <meta property="og:url" content="https://blogs.sephens.tech/" />
         <meta property="og:title" content={data.Title} />
         <meta property="og:description" content={data.Abstract} />
-        <meta
-          property="og:image"
-          content={`https://raw.githubusercontent.com/Sephens/Code-crumbs/main/public${data.HeaderImage}`}
-        />
+        <meta property="og:image" content={headerImage} />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://blogs.sephens.tech/" />
         <meta property="twitter:title" content={data.Title} />
         <meta property="twitter:description" content={data.Abstract} />
-        <meta
-          property="twitter:image"
-          content={`https://raw.githubusercontent.com/Sephens/Code-Crumbs/main/public${data.HeaderImage}`}
-        />
+        <meta property="twitter:image" content={headerImage} />
       </Head>
 
       <div className="min-h-screen relative bg-white dark:bg-gray-900">
