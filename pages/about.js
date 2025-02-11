@@ -18,7 +18,7 @@ function about({ topics }) {
       <Navbar topics={topics} />
       <div className="max-w-2xl pt-20 pb-32 px-6 text-center mx-auto">
         <div className="h-64 w-full justify-center flex">
-          <img src="/about.png" className="h-64" />
+          <img src="/me.png" className="h-64" />
         </div>
         <h2 className="text-3xl font-semibold text-gray-700 py-4 dark:text-gray-200">
           Hi,{" "}
