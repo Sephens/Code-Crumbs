@@ -3,7 +3,7 @@
 ## Writing own blogs made easier for everyone!
 
 <h2 align="center">
-  <a href="https://sephens.vercel" target="_blank">sephenscode_crumbs.tech</a>
+  <a href="https://code-crumbs.vercel,.app/" target="_blank">Code Crumbs</a>
 </h2>
 
 <div align="center">
@@ -29,7 +29,7 @@
 
 ## Built With
 
-My personal blogpage <a href="https://code-crumbs.vercel.app/" target="_blank">blogs.sephens.tech</a> which features some of my developer blog posts and experiences.<br/>
+My personal blogpage <a href="https://code-crumbs.vercel.app/" target="_blank">Code Crumbs</a> which features some of my developer blog posts and experiences.<br/>
 
 This project was built using these technologies.
 
